@@ -1,387 +1,387 @@
-{
-  "0": {
+[
+  {
     "civ": "America",
     "leader": "Teddy Roosevelt (Bull Moose)",
     "selected": true
   },
-  "1": {
+  {
     "civ": "America",
     "leader": "Teddy Roosevelt (Rough Rider)",
     "selected": true
   },
-  "2": {
+  {
     "civ": "America",
     "leader": "Abraham Lincoln",
     "selected": true
   },
-  "3": {
+  {
     "civ": "Arabia",
     "leader": "Saladin (Vizier)",
     "selected": true
   },
-  "4": {
+  {
     "civ": "Arabia",
     "leader": "Saladin (Sultan)",
     "selected": true
   },
-  "5": {
+  {
     "civ": "Australia",
     "leader": "John Curtin",
     "selected": true
   },
-  "6": {
+  {
     "civ": "Aztec",
     "leader": "Montezuma",
     "selected": true
   },
-  "7": {
+  {
     "civ": "Babylon",
     "leader": "Hammurabi",
     "selected": true
   },
-  "8": {
+  {
     "civ": "Brazil",
     "leader": "Pedro II",
     "selected": true
   },
-  "9": {
+  {
     "civ": "Byzantium",
     "leader": "Basil II",
     "selected": true
   },
-  "10": {
+  {
     "civ": "Byzantium",
     "leader": "Theodora",
     "selected": true
   },
-  "11": {
+  {
     "civ": "Canada",
     "leader": "Wilfrid Laurier",
     "selected": true
   },
-  "12": {
+  {
     "civ": "China",
     "leader": "Qin Shi Huang (Mandate of Heaven)",
     "selected": true
   },
-  "13": {
+  {
     "civ": "China",
     "leader": "Qin Shi Huang (Unifier)",
     "selected": true
   },
-  "14": {
+  {
     "civ": "China",
     "leader": "Kublai Khan",
     "selected": true
   },
-  "15": {
+  {
     "civ": "China",
     "leader": "Yongle",
     "selected": true
   },
-  "16": {
+  {
     "civ": "China",
     "leader": "Wu Zetian",
     "selected": true
   },
-  "17": {
+  {
     "civ": "Cree",
     "leader": "Poundmaker",
     "selected": true
   },
-  "18": {
+  {
     "civ": "Netherlands",
     "leader": "Wilhelmina",
     "selected": true
   },
-  "19": {
+  {
     "civ": "Egypt",
     "leader": "Cleopatra (Egyptian)",
     "selected": true
   },
-  "20": {
+  {
     "civ": "Egypt",
     "leader": "Cleopatra (Ptolemaic)",
     "selected": true
   },
-  "21": {
+  {
     "civ": "Egypt",
     "leader": "Ramses II",
     "selected": true
   },
-  "22": {
+  {
     "civ": "England",
     "leader": "Victoria (Age of Empire)",
     "selected": true
   },
-  "23": {
+  {
     "civ": "England",
     "leader": "Victoria (Age of Steam)",
     "selected": true
   },
-  "24": {
+  {
     "civ": "England",
     "leader": "Eleanor of Aquitaine",
     "selected": true
   },
-  "25": {
+  {
     "civ": "England",
     "leader": "Elizabeth",
     "selected": true
   },
-  "26": {
+  {
     "civ": "Ethiopia",
     "leader": "Menelik II",
     "selected": true
   },
-  "27": {
+  {
     "civ": "France",
     "leader": "Catherine de Medici (Black Queen)",
     "selected": true
   },
-  "28": {
+  {
     "civ": "France",
     "leader": "Catherine de Medici (Magnificence)",
     "selected": true
   },
-  "29": {
+  {
     "civ": "France",
     "leader": "Eleanor of Aquitaine",
     "selected": true
   },
-  "30": {
+  {
     "civ": "Gaul",
     "leader": "Ambiorix",
     "selected": true
   },
-  "31": {
+  {
     "civ": "Georgia",
     "leader": "Tamar",
     "selected": true
   },
-  "32": {
+  {
     "civ": "Germany",
     "leader": "Frederick Barbarossa",
     "selected": true
   },
-  "33": {
+  {
     "civ": "Germany",
     "leader": "Ludwig II",
     "selected": true
   },
-  "34": {
+  {
     "civ": "Gran Colombia",
     "leader": "Simon Bolivar",
     "selected": true
   },
-  "35": {
+  {
     "civ": "Greece",
     "leader": "Pericles",
     "selected": true
   },
-  "36": {
+  {
     "civ": "Greece",
     "leader": "Gorgo",
     "selected": true
   },
-  "37": {
+  {
     "civ": "Hungary",
     "leader": "Matthias Corvinus",
     "selected": true
   },
-  "38": {
+  {
     "civ": "Inca",
     "leader": "Pachacuti",
     "selected": true
   },
-  "39": {
+  {
     "civ": "India",
     "leader": "Gandhi",
     "selected": true
   },
-  "40": {
+  {
     "civ": "India",
     "leader": "Chandragupta",
     "selected": true
   },
-  "41": {
+  {
     "civ": "Indonesia",
     "leader": "Gitarja",
     "selected": true
   },
-  "42": {
+  {
     "civ": "Japan",
     "leader": "Hojo Tokimune",
     "selected": true
   },
-  "43": {
+  {
     "civ": "Japan",
     "leader": "Tokugawa",
     "selected": true
   },
-  "44": {
+  {
     "civ": "Khmer",
     "leader": "Jayavarman VII",
     "selected": true
   },
-  "45": {
+  {
     "civ": "Kongo",
     "leader": "Mvemba a Nzinga",
     "selected": true
   },
-  "46": {
+  {
     "civ": "Kongo",
     "leader": "Nzinga Mbande",
     "selected": true
   },
-  "47": {
+  {
     "civ": "Korea",
     "leader": "Seondeok",
     "selected": true
   },
-  "48": {
+  {
     "civ": "Korea",
     "leader": "Sejong",
     "selected": true
   },
-  "49": {
+  {
     "civ": "Macedonia",
     "leader": "Alexander",
     "selected": true
   },
-  "50": {
+  {
     "civ": "Mali",
     "leader": "Mansa Musa",
     "selected": true
   },
-  "51": {
+  {
     "civ": "Mali",
     "leader": "Sundiata Keita",
     "selected": true
   },
-  "52": {
+  {
     "civ": "Maori",
     "leader": "Kupe",
     "selected": true
   },
-  "53": {
+  {
     "civ": "Mapuche",
     "leader": "Lautaro",
     "selected": true
   },
-  "54": {
+  {
     "civ": "Maya",
     "leader": "Lady Six Sky",
     "selected": true
   },
-  "55": {
+  {
     "civ": "Mongolia",
     "leader": "Genghis Khan",
     "selected": true
   },
-  "56": {
+  {
     "civ": "Mongolia",
     "leader": "Kublai Khan",
     "selected": true
   },
-  "57": {
+  {
     "civ": "Norway",
     "leader": "Harald Hardrada (Konge)",
     "selected": true
   },
-  "58": {
+  {
     "civ": "Norway",
     "leader": "Harald Hardrada (Varangian)",
     "selected": true
   },
-  "59": {
+  {
     "civ": "Nubia",
     "leader": "Amanitore",
     "selected": true
   },
-  "60": {
+  {
     "civ": "Ottomans",
     "leader": "Suleiman (Kanuni)",
     "selected": true
   },
-  "61": {
+  {
     "civ": "Ottomans",
     "leader": "Suleiman (Muhtesem)",
     "selected": true
   },
-  "62": {
+  {
     "civ": "Persia",
     "leader": "Cyrus",
     "selected": true
   },
-  "63": {
+  {
     "civ": "Persia",
     "leader": "Nader Shah",
     "selected": true
   },
-  "64": {
+  {
     "civ": "Phoenicia",
     "leader": "Dido",
     "selected": true
   },
-  "65": {
+  {
     "civ": "Poland",
     "leader": "Jadwiga",
     "selected": true
   },
-  "66": {
+  {
     "civ": "Portugal",
     "leader": "Joao III",
     "selected": true
   },
-  "67": {
+  {
     "civ": "Rome",
     "leader": "Trajan",
     "selected": true
   },
-  "68": {
+  {
     "civ": "Rome",
     "leader": "Julius Caesar",
     "selected": true
   },
-  "69": {
+  {
     "civ": "Russia",
     "leader": "Peter",
     "selected": true
   },
-  "70": {
+  {
     "civ": "Scotland",
     "leader": "Robert the Bruce",
     "selected": true
   },
-  "71": {
+  {
     "civ": "Scythia",
     "leader": "Tomyris",
     "selected": true
   },
-  "72": {
+  {
     "civ": "Spain",
     "leader": "Phillip II",
     "selected": true
   },
-  "73": {
+  {
     "civ": "Sumeria",
     "leader": "Gilgamesh",
     "selected": true
   },
-  "74": {
+  {
     "civ": "Sweden",
     "leader": "Kristina",
     "selected": true
   },
-  "75": {
+  {
     "civ": "Vietnam",
     "leader": "Ba Trieu",
     "selected": true
   },
-  "76": {
+  {
     "civ": "Zulu",
     "leader": "Shaka",
     "selected": true
   }
-}
+]

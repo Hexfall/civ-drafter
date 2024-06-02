@@ -157,3 +157,7 @@ cython_debug/
 # IDEs
 .idea/
 .vscode/
+
+# Data files
+data/leaders.txt
+data/players.txt

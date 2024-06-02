@@ -6,9 +6,9 @@ default_leader_path = Path(__file__).parent.parent.joinpath('data/default_leader
 
 class CivModel:
     def __init__(self):
-        self.leaders: dict = {}
+        self.leaders: list = []
         self.__load()
-        self.__save()
+        self.save()
 
     def __load(self):
         if leader_path.exists():
@@ -17,19 +17,38 @@ class CivModel:
         else:
             with open(default_leader_path, 'r', encoding="utf-8") as f:
                 self.leaders = loads(f.read())
+        self.leaders.sort(key=lambda leader: leader['civ'] + leader['leader'])
 
-    def __save(self):
+    def save(self):
         with open(leader_path, 'w', encoding="utf-8") as f:
             f.write(dumps(self.leaders, indent=2))
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        self.__save()
+        self.save()
 
-    def is_selected(self, id: int) -> bool:
-        return self.leaders[id]['selected']
+    def is_selected(self, index: int) -> bool:
+        return self.leaders[index]['selected']
 
-    def get_summary(self):
+    def get_summary(self, search: str, only_selected: bool = False) -> list[tuple[list, int]]:
         items = []
-        for id, leader in self.leaders.items():
-            items.append((["[*]" if self.is_selected(id) else "[ ]", leader['civ'], leader['leader']], id))
+        for index, leader in enumerate(self.leaders):
+            if not only_selected or self.is_selected(index):
+                if search is not None and search != "":
+                    if search in leader['civ'] or search in leader['leader']:
+                        items.append(
+                            (["[*]" if self.is_selected(index) else "[ ]", leader['civ'], leader['leader']], index))
+                else:
+                    items.append(
+                        (["[*]" if self.is_selected(index) else "[ ]", leader['civ'], leader['leader']], index))
         return items
+
+    def toggle_selected(self, index: int):
+        self.leaders[index]['selected'] = not self.leaders[index]['selected']
+
+    def select_all(self):
+        for leader in self.leaders:
+            leader['selected'] = True
+
+    def unselect_all(self):
+        for leader in self.leaders:
+            leader['selected'] = False
