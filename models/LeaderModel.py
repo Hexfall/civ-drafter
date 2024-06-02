@@ -34,7 +34,7 @@ class CivModel:
         for index, leader in enumerate(self.leaders):
             if not only_selected or self.is_selected(index):
                 if search is not None and search != "":
-                    if search in leader['civ'] or search in leader['leader']:
+                    if search.lower() in leader['civ'].lower() or search.lower() in leader['leader'].lower():
                         items.append(
                             (["[*]" if self.is_selected(index) else "[ ]", leader['civ'], leader['leader']], index))
                 else:
