@@ -6,10 +6,12 @@ from asciimatics.screen import Screen
 
 from models.LeaderModel import CivModel
 from views.LeaderView import LeaderView
+from views.MenuView import MenuView
 
 
 def demo(screen, scene, civ_model: CivModel):
     scenes = [
+        Scene([MenuView(screen)], -1, name="Menu"),
         Scene([LeaderView(screen, civ_model)], -1, name="Leader List"),
     ]
 

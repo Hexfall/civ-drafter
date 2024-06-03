@@ -1,7 +1,7 @@
 from json import dumps
 from pathlib import Path
 
-from asciimatics.exceptions import StopApplication
+from asciimatics.exceptions import StopApplication, NextScene
 from asciimatics.screen import Screen
 from asciimatics.widgets import Frame, MultiColumnListBox, Widget, Layout, Divider, Button, Text
 
@@ -87,4 +87,4 @@ class LeaderView(Frame):
 
     def _quit(self):
         self._model.save()
-        raise StopApplication("User pressed quit")
+        raise NextScene("Menu")
