@@ -1,4 +1,4 @@
-from json import loads, dumps
+import json
 from pathlib import Path
 leader_path = Path(__file__).parent.parent.joinpath('data/leaders.txt').absolute()
 default_leader_path = Path(__file__).parent.parent.joinpath('data/default_leaders.txt').absolute()
@@ -13,15 +13,15 @@ class CivModel:
     def __load(self):
         if leader_path.exists():
             with open(leader_path, 'r', encoding="utf-8") as f:
-                self.leaders = loads(f.read())
+                self.leaders = json.load(f)
         else:
             with open(default_leader_path, 'r', encoding="utf-8") as f:
-                self.leaders = loads(f.read())
+                self.leaders = json.load(f)
         self.leaders.sort(key=lambda leader: leader['civ'] + leader['leader'])
 
     def save(self):
         with open(leader_path, 'w', encoding="utf-8") as f:
-            f.write(dumps(self.leaders, indent=2))
+            json.dump(self.leaders, f, indent=2)
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.save()
