@@ -4,7 +4,7 @@ from asciimatics.exceptions import ResizeScreenError
 from asciimatics.scene import Scene
 from asciimatics.screen import Screen
 
-from models.LeaderModel import CivModel
+from models.LeaderModel import LeaderModel
 from models.PlayerModel import PlayerModel
 from models.RuleModel import RuleModel
 from views.LeaderView import LeaderView
@@ -13,7 +13,7 @@ from views.PlayerView import PlayerView
 from views.RuleView import RuleView
 
 
-def demo(screen, scene, civ_model: CivModel, player_model: PlayerModel, rule_model: RuleModel) -> None:
+def demo(screen, scene, civ_model: LeaderModel, player_model: PlayerModel, rule_model: RuleModel) -> None:
     scenes = [
         Scene([MenuView(
             screen,
@@ -30,7 +30,7 @@ def demo(screen, scene, civ_model: CivModel, player_model: PlayerModel, rule_mod
 
 
 def main():
-    civ_model = CivModel()
+    civ_model = LeaderModel()
     player_model = PlayerModel()
     rule_model = RuleModel()
     last_scene = None

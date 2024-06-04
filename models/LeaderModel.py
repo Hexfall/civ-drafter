@@ -5,7 +5,7 @@ leader_path = Path(__file__).parent.parent.joinpath('data/leaders.txt').absolute
 default_leader_path = Path(__file__).parent.parent.joinpath('data/default_leaders.txt').absolute()
 
 
-class CivModel:
+class LeaderModel:
     def __init__(self):
         self.leaders: list = []
         self.__load()

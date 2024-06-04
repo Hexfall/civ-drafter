@@ -4,7 +4,7 @@ from asciimatics.exceptions import NextScene
 from asciimatics.screen import Screen
 from asciimatics.widgets import Frame, MultiColumnListBox, Widget, Layout, Divider, Button, Text
 
-from models import LeaderModel
+from models.LeaderModel import LeaderModel
 
 val_path = Path(__file__).parent.parent.joinpath('data/val.txt').absolute()
 
