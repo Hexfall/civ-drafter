@@ -13,7 +13,7 @@ class PlayerView(Frame):
                          on_load=self._reload_list,
                          hover_focus=True,
                          can_scroll=False,
-                         title="Leader List")
+                         title="Player List")
 
         self._model: PlayerModel = player_model
 
