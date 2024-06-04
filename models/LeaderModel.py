@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+
 leader_path = Path(__file__).parent.parent.joinpath('data/leaders.txt').absolute()
 default_leader_path = Path(__file__).parent.parent.joinpath('data/default_leaders.txt').absolute()
 

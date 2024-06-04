@@ -19,7 +19,7 @@ class PlayerModel:
             json.dump(self.players, f, indent=2)
 
     def add_player(self, player: str) -> int:
-        self.players.append(player)
+        self.players.append(player.strip())
         return len(self.players) - 1
 
     def remove_player(self, index: int) -> None:
