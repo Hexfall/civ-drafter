@@ -20,7 +20,7 @@ class MenuView(Frame):
         layout.add_widget(Divider(draw_line=False, height=2))
         layout.add_widget(Button("Player List", self._player_list))
         layout.add_widget(Divider(draw_line=False, height=2))
-        layout.add_widget(Button("Rules List", self._rules_list))
+        layout.add_widget(Button("Rules", self._rules_list))
         layout.add_widget(Divider(draw_line=False, height=2))
         layout.add_widget(Button("Draft", self._draft))
         layout.add_widget(Divider(draw_line=False, height=2))
@@ -35,7 +35,7 @@ class MenuView(Frame):
         raise NextScene("Player List")
 
     def _rules_list(self):
-        raise NextScene("Rules List")
+        raise NextScene("Rules")
 
     def _draft(self):
         raise NextScene("Draft")
