@@ -53,3 +53,6 @@ class CivModel:
     def unselect_all(self):
         for leader in self.leaders:
             leader['selected'] = False
+
+    def get_selected_count(self) -> int:
+        return len([l for l in self.leaders if l['selected']])

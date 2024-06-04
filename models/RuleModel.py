@@ -20,3 +20,6 @@ class RuleModel:
     def save(self) -> None:
         with open(rule_path, 'w') as f:
             json.dump(self.rules, f, indent=2)
+
+    def get_player_civs(self) -> int:
+        return self.rules["civs"]

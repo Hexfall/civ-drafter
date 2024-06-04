@@ -15,7 +15,12 @@ from views.RuleView import RuleView
 
 def demo(screen, scene, civ_model: CivModel, player_model: PlayerModel, rule_model: RuleModel) -> None:
     scenes = [
-        Scene([MenuView(screen)], -1, name="Menu"),
+        Scene([MenuView(
+            screen,
+            lambda: civ_model.get_selected_count() >= player_model.get_player_count()*rule_model.get_player_civs())],
+            -1,
+            name="Menu"
+        ),
         Scene([LeaderView(screen, civ_model)], -1, name="Leader List"),
         Scene([PlayerView(screen, player_model)], -1, name="Player List"),
         Scene([RuleView(screen, rule_model)], -1, name="Rules"),

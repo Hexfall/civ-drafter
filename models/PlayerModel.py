@@ -27,3 +27,6 @@ class PlayerModel:
 
     def get_summary(self) -> list[tuple[str, int]]:
         return [(p, i) for i, p in enumerate(self.players)]
+
+    def get_player_count(self) -> int:
+        return len(self.players)
