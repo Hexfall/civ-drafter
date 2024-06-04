@@ -6,7 +6,7 @@ player_path = Path(__file__).parent.parent.joinpath('data/players.txt').absolute
 
 class PlayerModel:
     def __init__(self) -> None:
-        self.players = []
+        self.players: list[str] = []
         self._load()
 
     def _load(self) -> None:
@@ -30,3 +30,6 @@ class PlayerModel:
 
     def get_player_count(self) -> int:
         return len(self.players)
+
+    def get_player(self, index: int) -> str:
+        return self.players[index]

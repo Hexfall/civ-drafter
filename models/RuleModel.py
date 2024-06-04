@@ -23,3 +23,6 @@ class RuleModel:
 
     def get_player_civs(self) -> int:
         return self.rules["civs"]
+
+    def can_mulligan(self) -> bool:
+        return self.rules["mulligan"]

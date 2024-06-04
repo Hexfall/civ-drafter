@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from random import shuffle
 
 leader_path = Path(__file__).parent.parent.joinpath('data/leaders.txt').absolute()
 default_leader_path = Path(__file__).parent.parent.joinpath('data/default_leaders.txt').absolute()
@@ -56,3 +57,14 @@ class LeaderModel:
 
     def get_selected_count(self) -> int:
         return len([l for l in self.leaders if l['selected']])
+
+    def roll(self) -> list[int]:
+        leaders = [i for i, l in enumerate(self.leaders) if l['selected']]
+        shuffle(leaders)
+        return leaders
+
+    def get_civ(self, index: int) -> str:
+        return self.leaders[index]['civ'] + " - " + self.leaders[index]['leader']
+
+    def get_civ_summary(self, index: int) -> tuple[str, int]:
+        return self.get_civ(index), index

@@ -8,6 +8,7 @@ from models.LeaderModel import LeaderModel
 
 val_path = Path(__file__).parent.parent.joinpath('data/val.txt').absolute()
 
+
 class LeaderView(Frame):
     def __init__(self, screen: Screen, leader_model: LeaderModel):
         super().__init__(screen,
@@ -15,7 +16,7 @@ class LeaderView(Frame):
                          screen.width,
                          on_load=self._reload_list,
                          hover_focus=True,
-                         can_scroll=False,
+                         can_scroll=True,
                          title="Leader List")
 
         self._model: LeaderModel = leader_model

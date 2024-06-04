@@ -23,7 +23,7 @@ class RuleView(Frame):
         layout2 = Layout([1])
         self.add_layout(layout2)
         layout2.add_widget(Divider())
-        layout2.add_widget(Button("OK", self._quit))
+        layout2.add_widget(Button("Ok", self._quit))
 
         self.fix()
 
