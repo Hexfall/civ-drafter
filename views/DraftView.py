@@ -14,22 +14,22 @@ class DraftView(Frame):
                          screen.width,
                          hover_focus=True,
                          can_scroll=False,
-                         on_load=self._reload,
+                         on_load=self._populate,
                          title="Draft")
 
         self._leader_model: LeaderModel = leader_model
         self._player_model: PlayerModel = player_model
         self._rule_model: RuleModel = rule_model
 
-        self._selected = [-1] * player_model.get_player_count()
-        self._list_boxes: list[ListBox] = [None] * player_model.get_player_count()
+        self._selected = [-1] * self._player_model.get_player_count()
+        self._list_boxes: list[ListBox] = [None] * self._player_model.get_player_count()
         self._civs_to_draft: int = self._rule_model.get_player_civs()
+        self._last_view = False
 
         # Player boxes
-        layout = Layout([1])
-        self.add_layout(layout)
-        for i in range(player_model.get_player_count()):
-            self._add_player(i, layout)
+        self.layout = Layout([1])
+        self.add_layout(self.layout)
+        self._populate()
 
         # Bottom Buffer
         self.add_layout(Layout([1], fill_frame=True))
@@ -60,7 +60,8 @@ class DraftView(Frame):
         return self._rule_model.can_mulligan() and self._civs_to_draft > 1
 
     def _mulligan(self):
-        pass
+        self._civs_to_draft -= 1
+        self._reload()
 
     def _reload(self):
         civs = self._leader_model.roll()
@@ -70,15 +71,17 @@ class DraftView(Frame):
 
         for i, lb in enumerate(self._list_boxes):
             if self._selected[i] == -1:
-                lb.options = [self._leader_model.get_civ_summary(civs.pop()) for _ in range(self._civs_to_draft)] + [("Mulligan", -1)] if self._can_mulligan() else []
+                lb.options = [self._leader_model.get_civ_summary(civs.pop()) for _ in range(self._civs_to_draft)] + ([("Mulligan", -1)] if self._can_mulligan() else [])
             else:
                 lb.options = [self._leader_model.get_civ_summary(self._selected[i])]
 
     def _ok(self):
-        if any([i == -1 for i in self._selected]):
-            for i, lb in enumerate(self._list_boxes):
-                self._selected[i] = lb.value
-            self._civs_to_draft -= 1
+        for i, lb in enumerate(self._list_boxes):
+            self._selected[i] = lb.value
+        if -1 in self._selected:
+            self._mulligan()
+        elif not self._last_view and self._civs_to_draft > 1:
+            self._last_view = not self._last_view
             self._reload()
         else:
             self._quit()
@@ -86,5 +89,16 @@ class DraftView(Frame):
     def _quit(self):
         raise NextScene("Menu")
 
-    def _on_change(self, player_index: int):
-        pass
+    def _populate(self):
+        self._selected = [-1] * self._player_model.get_player_count()
+        self._list_boxes: list[ListBox] = [None] * self._player_model.get_player_count()
+        self._civs_to_draft: int = self._rule_model.get_player_civs()
+
+        # Player boxes
+        self.layout.clear_widgets()
+        for i in range(self._player_model.get_player_count()):
+            self._add_player(i, self.layout)
+        self.layout.focus(True)
+
+        self.fix()
+        self._reload()
