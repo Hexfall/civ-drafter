@@ -64,6 +64,9 @@ class DraftView(Frame):
         self._reload()
 
     def _reload(self):
+        if self._leader_model.get_selected_count() < self._civs_to_draft * self._player_model.get_player_count():
+            return
+
         civs = self._leader_model.roll()
         for civ in self._selected:
             if civ != -1 and civ in civs:
